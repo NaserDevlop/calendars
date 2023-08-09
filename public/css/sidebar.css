@@ -1,0 +1,140 @@
+
+body{
+    font-family: 'Roboto' , sans-serif;
+     user-select: none;
+     height: 100vh;
+     overflow: hidden;
+}
+.label-2 {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    position: absolute;
+}
+.overflow-hidden {
+    overflow-y: scroll !important;
+}
+.form-outline .form-control.active~.form-label, .form-outline .form-control:focus~.form-label {
+    transform: translateY(-1rem) translateY(0.1rem) scale(.8);
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.sidebar{
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    transition: all .5s ease;
+    
+}
+.sidebar header {
+    font-size: 21px;
+    background: #DD042B;
+    color: #FFF;
+    text-align: center;
+    line-height: 70px;
+    user-select: none;
+    margin-left: -3vw;
+    position: relative;
+}
+.sidebar ul a{
+  display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: #F49712;
+    padding-left: 40px;
+    box-sizing: border-box;
+    /* border-top:  1px solid rgba(233, 24, 24, 0.1); */
+    /* border-bottom: 1px solid rgb(179, 6, 6);  */
+    transition: .4s;
+}
+ul li:hover a{
+    padding-left: 50px;
+    color:#FFFFFF;
+    background-color: #DD042B;
+    border-left: 5px solid #F49712;
+}
+.sidebar ul li a i {
+    margin-right: 16px;
+}
+#check{
+    display: none;
+}
+label #btn {
+    margin-top: -13px;
+    position: absolute;
+    cursor: pointer;
+    background: #FFFFFF;
+    border-radius: 5px;
+    color:#DD042B;
+    transition: all .5s ;
+}
+ label #cancel {
+    margin-top: -6px;
+    position: absolute;
+    cursor: pointer;
+    background: #FFFFFF;
+    border-radius: 5px 2px 0 0;
+    color: #DD042B;
+    transition: all .5s;
+    height: 66px;
+    /* border-bottom: 1px #dd042b solid; */
+}
+label #btn{
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    padding: 6px 12px;
+    
+}
+label #cancel {
+    z-index: 1;
+    left: -195px;
+    top: 30px;
+    font-size: 23px;
+    opacity: 0;
+    padding: 4px 9px;
+    line-height: 65px;
+}
+label #cancel:hover {
+    color: #FFFFFF;
+     background-color: #DD042B;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+    
+}
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+    
+}
+#check:checked ~ label #cancel{
+    left: 212px;
+    opacity: 1;   
+    top: 10px;
+}
+
+section{
+    background: url(06.png) no-repeat;
+    background-position: center;
+    background-size: 100% ;
+    height: 100vh;   
+    transition: all .5s ;
+}
+#check:checked ~ section{
+    margin-left: 250px;
+}
+
+
+
+
+
+
